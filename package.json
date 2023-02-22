@@ -1,0 +1,19 @@
+{
+  "name": "kk-cv",
+  "version": "1.0.0",
+  "description": "CV For Kenny Karter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kennyk22/KK-CV.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kennyk22/KK-CV/issues"
+  },
+  "homepage": "https://github.com/Kennyk22/KK-CV#readme"
+}
