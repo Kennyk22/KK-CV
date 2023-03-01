@@ -50,14 +50,15 @@ function App() {
   }, [])
 
   const adjustDivs = (size: number) => {
-    const widthSize = Math.ceil(state.components.length/size)
+    const widthSize = Math.floor(state.components.length/size)
     console.log(widthSize)
     const compArray = [...state.components]
     const fullComponent = []
     
     for (let i = 0; i < size; i++) {
       let oneDiv = []
-      for (let i = 0; i < widthSize; i++) {
+      const compLength = compArray.length
+      for (let j = 0; j < (i === size-1 ? compLength: widthSize); j++) {
         if (compArray.length) {
           oneDiv.push(<Container Component={compArray.shift() as ReactComponent} />)
           console.log('compArr', compArray)
@@ -71,19 +72,12 @@ function App() {
   }
 
   return (
-    <div className="flex-col items-center w-screen h-screen bg-gray-300" data-testid="App">
+    <div className="flex flex-col items-center w-screen h-screen bg-gray-300" data-testid="App">
       <Header />
-      <div className='w-full h-fit flex-row flex-wrap justify-around'>
+      <div className='flex w-full h-fit flex-row flex-wrap justify-around'>
         {adjustDivs(state.size).map((el) => {
           return el
         })}
-        {/* <div className='w-11/12 h-fit flex-col flex-wrap items-center'>
-          <Container Component={GPTA}/>
-          <Container Component={CoverLtr}/>
-          <Container Component={SudoLit}/>
-          <Container Component={Swoop}/>
-          <Container Component={GPTA}/>
-        </div> */}
       </div>
       <Footer/>
     </div>
