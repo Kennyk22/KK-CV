@@ -8,9 +8,9 @@ function Header() {
   
 
   return (
-    <header className='flex justify-center w-full h-1/2 py-[5%]'>
-      <div className="flex p-[2%] h-full w-1/2 rounded-xl bg-[#4c4c74] items-center shadow-xl">
-        <div className='flex h-fit w-fit p-[1%] rounded-[50%] mr-[5%] justify-center items-center bg-[#ffffff]'>
+    <header className='flex justify-center w-full h-fit py-[5%]'>
+      <div className="flex p-[2%] h-full flex-col sm:flex-row w-1/2 rounded-xl bg-[#4c4c74] items-center shadow-xl">
+        <div className='flex h-fit w-fit p-[1%] rounded-[50%] sm:mr-[5%] sm:mb-0 mb-5 justify-center items-center bg-[#ffffff]'>
           <img className="rounded-[50%]" src="https://media.licdn.com/dms/image/D4D03AQFHXKD1FGARfQ/profile-displayphoto-shrink_800_800/0/1676134382179?e=1681948800&v=beta&t=gCHOk1OeyR056HOb55raCFeaTvJHR0QjsJ1AmRCV3D4" alt="" />
         </div>
         <div className='flex justify-center items-center bg-white rounded-md p-[1.5%]'>

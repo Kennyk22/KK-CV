@@ -4,6 +4,7 @@ import { actionCompany, actionLetter, actionLoading } from '../../Redux/Actions'
 import { WholeState, CoverLetter } from '../../Redux/StateTypes'
 import { NewLetter } from '../../Services/AIService'
 import CvrDrop from './CvrDrop'
+import { SpinnerCircular } from 'spinners-react'
 
 function CoverLtr() {
 
@@ -33,7 +34,9 @@ function CoverLtr() {
     <div className='flex h-fit w-full flex-col bg-white my-2 rounded px-1 pb-10'>
       {
       state.loading ?
-      <p>LOADING</p> :
+      <div className='flex justify-center items-center mt-10'>
+      <SpinnerCircular color='#4c4c74' />
+      </div>:
       <p className='whitespace-pre-line' >{state.text}</p>
       }
     </div>
