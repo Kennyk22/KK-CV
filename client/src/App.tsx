@@ -21,7 +21,7 @@ function App() {
   //cont https://blog.bitsrc.io/using-react-hooks-to-recognize-respond-to-current-viewport-size-c385009005c0
   useEffect(() => {
     const handleResize = () => {
-      console.log(window.innerWidth)
+      
       if (window.innerWidth > 1710) {
 
         dispatch(actionSize(4))
@@ -39,7 +39,7 @@ function App() {
         dispatch(actionSize(1))
 
       }
-      console.log(state)
+      
     }
     handleResize()
     window.addEventListener('resize', handleResize)
@@ -51,7 +51,7 @@ function App() {
 
   const adjustDivs = (size: number) => {
     const widthSize = Math.floor(state.components.length/size)
-    console.log(widthSize)
+    
     const compArray = [...state.components]
     const fullComponent = []
     
@@ -61,13 +61,10 @@ function App() {
       for (let j = 0; j < (i === size-1 ? compLength: widthSize); j++) {
         if (compArray.length) {
           oneDiv.push(<Container Component={compArray.shift() as ReactComponent} />)
-          console.log('compArr', compArray)
-          console.log(oneDiv)
         }
       }
       fullComponent.push(<div className='w-[360px] h-fit flex-col flex-wrap justify-center'>{oneDiv.map((el) => el)}</div>)
     }
-    console.log('fullComponent', fullComponent)
     return fullComponent
   }
 

@@ -14,3 +14,9 @@ export const  actionDrop = (catagory: string, select: string) => {
 export const actionCompany = (company: string) => {
     return {type: 'COMPANY', payload: company}
 }
+
+export const actionLoading = {type: 'LOADING'}
+
+export const actionLetter = (letter: string) => {
+    return {type: 'NEW_LETTER', payload: letter}
+}

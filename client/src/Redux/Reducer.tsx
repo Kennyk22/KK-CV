@@ -29,9 +29,7 @@ const coverState = {
     
     Sincerely,\n
     
-    Kenny Karter
-    
-        `,
+    Kenny Karter`,
     loading: false,
     Focus: ['Backend', 'Frontend', 'Full Stack'],
     FocusSelect: '',
